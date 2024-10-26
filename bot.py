@@ -27,3 +27,11 @@ async def on_message(message):
     await bot.process_commands(message)
 
 bot.run('YOUR_BOT_TOKEN')
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+token = os.getenv('DISCORD_TOKEN')
+
+print(token)  # トークンが正しく読み込まれているか確認
